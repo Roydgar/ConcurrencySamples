@@ -4,4 +4,5 @@ There are coded samples for:
 - Dining philosophers
 - Thread-safe and deadlock-safe Banking transfers
 - Producer-Consumer pattern (using wait() and notify())
+- Lock-Free Queue (CAS)
 - etc
