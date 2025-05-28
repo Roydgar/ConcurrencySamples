@@ -24,6 +24,9 @@ public class SynchronizedList {
     public boolean contains(String element) {
         synchronized (syncList) { // Here, synchronization is required because contains() method
                                     // is not implemented in Collections.synchronizedList().
+                                    // NOTE: IT WORKS on  Collections.synchronizedList() because it uses the same
+                                    // mutex (this) under the hood. The same technique would not work with ConcurrentHashMap
+                                    // because it uses different locking mechanism
             return syncList.contains(element);
         }
     }

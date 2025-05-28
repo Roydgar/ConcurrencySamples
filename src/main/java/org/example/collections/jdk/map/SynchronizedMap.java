@@ -1,4 +1,4 @@
-package org.example.collections.jdk;
+package org.example.collections.jdk.map;
 
 import java.util.Collections;
 import java.util.HashMap;
