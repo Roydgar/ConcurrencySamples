@@ -4,6 +4,10 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+// - Synchronized collections are based on using "synchronized" for each method (synchronized(this)). It means that only one thread can acce ss it in a time.
+//   Thus, Synchronized collections are slow.
+//- Not all the methods of the target collection are overridden by synchronized collections.
+//     For example, Collections.synchronizedList(new ArrayList<>()).contains(value) is not synchronized. It means that custom synchronization is needed
 public class SynchronizedMap {
         private final Map<String, Integer> map = Collections.synchronizedMap(new HashMap<>());
     
