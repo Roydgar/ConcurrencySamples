@@ -34,6 +34,10 @@ public class ConcurrentMap {
         map.remove(key);
     }
 
+    // Also atomic, thread-safe
+    public void decreaseByPercentage(String item, int percentage) {
+        map.computeIfPresent(item, (key, val) -> val - (val * percentage / 100));
+    }
 
     public void displayMap() {
         map.forEach((key, count) -> System.out.println(key + ": " + count));
